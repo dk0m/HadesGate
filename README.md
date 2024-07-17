@@ -27,5 +27,5 @@ ZwAlpcCreatePort endp
 So what **HadesGate** does is parse the exports, Look for functions with the **Zw** prefix, Go through the stub's memory until we find a **0xB8** opcode in the stub, Which indicates we are currently going through the ```mov eax, SSN``` line, Then HadesGate extracts the SSN from the function and returns.
 
 ## Problems With It
-This method will NOT get you every single **SSN** you want, So I wouldn't suggest using it in a real engagement unless the system calls you need are exported in **ntoskrnl.exe**.
+This method will NOT get you every single **SSN** you want, So I wouldn't suggest using it in a real engagement unless the system calls you need are exported in ```ntoskrnl.exe```.
 
